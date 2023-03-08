@@ -1,0 +1,10 @@
+{% extends 'layout.html' %} {% block content %}
+        <h3>Upload Excel File (.xlsx)</h3>
+    <form action="{{ url_for('view') }}" method="post" enctype="multipart/form-data">
+        <div class="mb-3 ">
+        <input type="file" name="file" class="form-control"
+            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+        </div>
+        <input type="submit" value="Upload" class="btn btn-primary">
+    </form>
+{% endblock %}
